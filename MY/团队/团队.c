@@ -10,6 +10,7 @@ int main(void)
 	memset(go, 0, sizeof(go));
 	memset(charactor, 0, sizeof(charactor));
 	freopen(name, "w", stdout);
+	printf("v2.0 raw\n");
 	int i,j, result, x, y, color;
 	//ªÊ÷∆∆Â≈Ã∫·œﬂ 
 	for(i=0; i<13; i++){
@@ -48,6 +49,17 @@ int main(void)
 		printf("%.8x\n", result);
 		result++;
 		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++; 
+		result += 0x100;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
 		result--;
 		printf("%.8x\n", result);
 		result += 0x100;
@@ -58,7 +70,79 @@ int main(void)
 		printf("%.8x\n", result);
 		result++;
 		printf("%.8x\n", result);
-		
+		result++;
+		printf("%.8x\n", result);
+		result += 0x100;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result += 0x100;
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+	}
+	
+	for(i = 5; i<10; i++){
+		x = i;
+		y = i;
+		if(go[x][y] == 0){
+			go[x][y] = 1;
+			charactor[x][y] = 2;
+		}
+		result = (20+7*x) + ((19+7*y)<<8) + (charactor[x][y]<<16);
+		result = result | (1<<31);
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++; 
+		result += 0x100;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result += 0x100;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result += 0x100;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result--;
+		printf("%.8x\n", result);
+		result += 0x100;
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
+		result++;
+		printf("%.8x\n", result);
 	}
 	return 0;
 } 
